@@ -46,5 +46,5 @@ You can specify the path to this file in the `config.yaml` file.
 
 ## Google Calendar integration
 If you run BLEPS with the `gcal` option set to `True`, then you should generate a .csv file that can be imported into Google Calendar. 
-I suggest making a new calendar for this, setting the timezone to UTC to prevent unexpected time conversions. 
+I suggest making a new calendar for this, setting the timezone to UTC to prevent unexpected time conversions - but always check before planning an observation! 
 You can import a calendar from the Settings menu - [see this guide from Google for more info](https://support.google.com/calendar/answer/37118?hl=en&co=GENIE.Platform%3DDesktop).
