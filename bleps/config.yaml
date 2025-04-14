@@ -1,0 +1,23 @@
+# Configuration file for Binary ecLipsE Prediction Software (BLEPS)
+# Nikki Miller, 2025
+
+target_file: 'target_info.csv'  # EB target info (csv). Must contain columns: Name,RA,Dec,T0,Period,Width1,Phase2,Width2
+                                # RA & Dec should be in sexagesimal format, T0 in JD, eclipse widths in phase units
+observatory:
+  name: 'Westerlund'            # Label for saving
+  lat: 59.837308                # Observer latitude (deg)
+  lon: 17.647988                # Observer longitude (deg)
+  elev: 15                      # Observer elevation (m)
+altitude_limits:
+  - 30                          # Minimum altitude (deg) that can be observed
+  - 80                          # Maximum altitude (deg) that can be observed
+search: -60                      # Number of days into the future to search for feasible eclipses.
+                                # You may instead enter a negative number to search for eclipses in the recent past.
+strategy: 'split'               # Eclipse feasibility calculation strategy:
+                                # - 'split': Consider each half of an eclipse separately in feasibility checks (ingress/
+                                #            egress). Useful for long-period and/or totally-eclipsing EBs.
+                                # - 'full': The whole eclipse must be pass feasibility checks in order to be returned.
+                                # - 'any': Returns info if the system is observable at any point during the eclipse.
+save: True                      # Whether to save eclipse info to a csv file
+gcal: True                      # Whether to save info to a csv format readable by Google Calendar
+                                # CAUTION: Make sure your calendar is set to UTC time. Imports don't support timezones.
