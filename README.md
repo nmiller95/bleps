@@ -14,7 +14,20 @@ Output options include:
 
 #### CAUTION: All times are calculated in UTC. Take care to consider timezones when planning your observations!
 
-## Setting up
+## Installation
+Clone this repository:
+
+```git clone https://github.com/nmiller95/bleps.git```
+
+Check you have the dependencies installed. You can do this manually or use the command (in the `bleps/` directory):
+
+```pip install -r requirements.txt```
+
+You can then run BLEPS (from the `bleps/` directory) with the command:
+
+```python3 bleps.py```
+
+## Setting up BLEPS
 BLEPS uses a configuration file to set up the calculations. It should be named `config.yaml` and kept in the same folder as the `bleps.py` script.
 In here, you can point to your list of target info, specify your location / altitude / date constraints, and choose how you want to save the output.
 You can also specify what observing strategy you want to use to hunt for visible eclipses.
